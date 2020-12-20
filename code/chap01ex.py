@@ -24,6 +24,21 @@ def ReadFemResp(
 def CleanFemPreg(df):
     pass
 
+def ValidatePregNum()
+    preg = nsfg.ReadFemPreg()
+
+    preg_map = nsfg.MakePregMap(preg)
+
+    for index, pregnum in resp.pregnum.items():
+        caseid = resp.caseid[index]
+        indices = preg_map[case_id]
+
+        if len(indices) != pregnum:
+            print(caseid, len(indices), pregnum)
+            return False
+            
+    return True
+
 def main(script):
     """Tests the functions in this module.
 
